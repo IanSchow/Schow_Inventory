@@ -8,7 +8,9 @@ namespace Schow_Inventory
 {
     interface IShippable
     {
+        // Getting the product cost
         decimal ShipCost { get; }
+        // Getting the product type
         string Product { get; }
     }
 }

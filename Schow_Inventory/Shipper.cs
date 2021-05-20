@@ -8,14 +8,18 @@ namespace Schow_Inventory
 {
     class Shipper
     {
+        // Creating Variables
         int fillSize = 0;
         IShippable[] ProductArray = new IShippable[10];
+        
+        // Adding the newest product to the product array and increasing the counter keeping track of how full it is
         public void Add(IShippable product, int location)
         {
             ProductArray[location] = product;
             fillSize++;
         }
 
+        // Counting how many of the chosen product is in the array
         public int GetProducts(string type)
         {
             int productNum = 0;
@@ -28,6 +32,7 @@ namespace Schow_Inventory
             return productNum;
         }
 
+        // Adding up the total cost of everything i
         public decimal GetTotal()
         {
             decimal total = 0;
